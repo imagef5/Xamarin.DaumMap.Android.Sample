@@ -18,6 +18,6 @@
 		<activity android:name="daum.map.CameraDemoActivity" android:label="@string/camera_demo_title"></activity>
 		<activity android:name="daum.map.EventsDemoActivity" android:label="@string/events_demo_title"></activity>
 		<activity android:name="daum.map.permission.AppPermissionHandlerActivit" android:label="@string/search_demo_title"></activity>
-		<meta-data android:name="com.kakao.sdk.AppKey" android:value="7aed07242260c299437727008f3bc130" />
+		<meta-data android:name="com.kakao.sdk.AppKey" android:value="YOUR_KAKAO_APPKEY" />
 	</application>
 </manifest>

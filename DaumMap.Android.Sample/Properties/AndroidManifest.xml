@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.DaumMapAndroidSample">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/MyTheme">
+		<activity android:name="daum.map.MainActivity" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="daum.map.MapViewDemoActivity" android:label="@string/map_view_demo_title"></activity>
+		<activity android:name="daum.map.MarkerDemoActivity" android:label="@string/marker_demo_title"></activity>
+		<activity android:name="daum.map.PolygonDemoActivity" android:label="@string/polygon_demo_title"></activity>
+		<activity android:name="daum.map.LocationDemoActivity" android:label="@string/location_demo_title"></activity>
+		<activity android:name="daum.map.CameraDemoActivity" android:label="@string/camera_demo_title"></activity>
+		<activity android:name="daum.map.EventsDemoActivity" android:label="@string/events_demo_title"></activity>
+		<activity android:name="daum.map.permission.AppPermissionHandlerActivit" android:label="@string/search_demo_title"></activity>
+		<meta-data android:name="com.kakao.sdk.AppKey" android:value="7aed07242260c299437727008f3bc130" />
+	</application>
+</manifest>

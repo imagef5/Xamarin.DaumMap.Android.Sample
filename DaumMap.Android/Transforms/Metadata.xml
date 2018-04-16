@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <attr path="/api/package[@name='net.daum.mf.map.api']/interface[@name='MapView.POIItemEventListener']/
+            method[@name='onCalloutBalloonOfPOIItemTouched' and count(parameter)=3 
+            and parameter[1][@type='net.daum.mf.map.api.MapView'] and parameter[2][@type='net.daum.mf.map.api.MapPOIItem']
+            and parameter[3][@type='net.daum.mf.map.api.MapPOIItem.CalloutBalloonButtonType']]"
+            name="managedName">OnCalloutBalloonOfPOIItemWithButtonTypeTouched</attr>
+    <!-- 
+        MapView.MapTileMode : change property name  
+        동일한 Property 명과 enum 명이 동일한 클래스에 존재하여 
+        C# 형태의 getter/setter 의 역활을 하는 Property 로 설정이 되지 않고
+        GetMethod(), SetMethod() 의 형태로 표현이 되는것을 변경하고자 propertyName을 변경
+    -->
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapView']/
+            method[@name='setMapTileMode' and count(parameter)=1 
+            and parameter[1][@type='net.daum.mf.map.api.MapView.MapTileMode']]"
+             name="propertyName">TileMode</attr>
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapView']/
+            method[@name='getMapTileMode' and count(parameter)=0]"
+            name="propertyName">TileMode</attr>
+    <!-- MapView.MapType : change property name  -->
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapView']/
+            method[@name='setMapType' and count(parameter)=1 
+            and parameter[1][@type='net.daum.mf.map.api.MapView.MapType']]"
+            name="propertyName">Maptype</attr>
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapView']/
+            method[@name='getMapType' and count(parameter)=0]"
+            name="propertyName">Maptype</attr>
+    <!-- MapPOIItem.MarkerType : change property name  -->
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapPOIItem']/
+            method[@name='setMarkerType' and count(parameter)=1 
+            and parameter[1][@type='net.daum.mf.map.api.MapPOIItem.MarkerType']]"
+            name="propertyName">POIItemMarkerType</attr>
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapPOIItem']/
+            method[@name='getMarkerType' and count(parameter)=0]"
+            name="propertyName">POIItemMarkerType</attr>
+    <!-- MapPOIItem.ShowAnimationType : change property name  -->
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapPOIItem']/
+            method[@name='setShowAnimationType' and count(parameter)=1 
+            and parameter[1][@type='net.daum.mf.map.api.MapPOIItem.ShowAnimationType']]"
+            name="propertyName">AnimationType</attr>
+    <attr path="/api/package[@name='net.daum.mf.map.api']/class[@name='MapPOIItem']/
+            method[@name='getShowAnimationType' and count(parameter)=0]"
+            name="propertyName">AnimationType</attr>
+</metadata>
